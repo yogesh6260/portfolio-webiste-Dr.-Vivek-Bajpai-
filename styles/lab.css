@@ -1,0 +1,95 @@
+.navigation__container {
+  margin: 0;
+  height: 45px;
+}
+
+.intro__container {
+  position: relative;
+  background: url("../Assets/Images/Research\ Lab/toplab.jpg");
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.3s;
+}
+
+marquee {
+  position: absolute;
+  top: 10px;
+  font-weight: 450;
+}
+.brief_info__container {
+  flex-direction: column;
+  justify-content: center;
+}
+.brief_info__container .brief_info__content {
+  width: 100%;
+}
+.brief_info__container .research_areas {
+  width: 100%;
+}
+.research_areas .research_areas__list {
+  padding-left: 15px;
+  margin-left: 15px;
+}
+.research_areas__list li {
+  margin-top: 7px;
+}
+.facilities__container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem auto;
+}
+.facilities__container h2 {
+  font-size: 25px;
+  font-weight: 550;
+}
+.cards__container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  margin-top: 10px;
+}
+/* .card__container .video__container {
+} */
+.card {
+  width: 500px;
+  height: 490px;
+  border-radius: 20px;
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.video__container video {
+  margin-top: 10px;
+  width: 100%;
+}
+.video__container .btn {
+  width: 100%;
+  background-color: rgb(61, 156, 211);
+  font-size: 20px;
+}
+.btn:hover {
+  background-color: rgb(5, 102, 158);
+  color: white;
+}
+.card img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.card .card__content {
+  padding: 2px 16px;
+}
+.upcoming_facilities {
+  width: 100%;
+  margin: 1rem auto;
+}

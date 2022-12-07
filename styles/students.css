@@ -1,0 +1,202 @@
+body {
+  font-family: tahoma;
+  background-color: #cff5e7;
+  user-select: none;
+}
+.header__container {
+  min-height: 10vh;
+}
+h2 {
+  margin-left: 40px;
+}
+
+.students__container {
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.students__container #link a {
+  color: #2f56b0;
+  position: relative;
+  left: 50%;
+  /* transform: translateX(-50%); */
+  font-size: 23px;
+  font-weight: bold;
+  transition: color 0.4s ease-out;
+}
+#link a:hover {
+  color: #457dfb;
+  right: 0;
+  text-decoration: none;
+}
+#link a:hover:after {
+  border-color: #457dfb;
+  right: 0;
+}
+
+#link a::after {
+  border-radius: 1em;
+  border-top: 0.1em solid #2f56b0;
+  content: "";
+  position: absolute;
+  right: 100%;
+  bottom: 0.14em;
+  left: 0;
+  transition: right 0.4s cubic-bezier(0, 0.5, 0, 1), border-color 0.4s ease-out;
+}
+#link a::after {
+  animation: anchor-underline 2s cubic-bezier(0, 0.5, 0, 1) infinite;
+  border-color: #457dfb;
+}
+
+/* Animation for Link  */
+@keyframes anchor-underline {
+  0%,
+  10% {
+    left: 0;
+    right: 100%;
+  }
+  40%,
+  60% {
+    left: 0;
+    right: 0;
+  }
+  90%,
+  100% {
+    left: 100%;
+    right: 0;
+  }
+}
+.students__container .students__phd,
+.students__container .students_mtech {
+  width: 90%;
+  margin: 1rem auto;
+}
+.our-team {
+  padding: 20px 0 30px;
+  margin-bottom: 10px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.our-team .picture {
+  display: inline-block;
+  height: 130px;
+  width: 130px;
+  margin-bottom: 17px;
+  z-index: 1;
+  position: relative;
+}
+
+.our-team .picture::before {
+  content: "";
+  width: 100%;
+  height: 0;
+  border-radius: 50%;
+  background-color: #1369ce;
+  position: absolute;
+  bottom: 135%;
+  right: 0;
+  left: 0;
+  opacity: 0.9;
+  transform: scale(3);
+  transition: all 0.3s linear 0s;
+}
+
+.our-team:hover .picture::before {
+  height: 100%;
+}
+
+.our-team .picture::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #1369ce;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.our-team .picture img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all 0.9s ease 0s;
+}
+
+.our-team:hover .picture img {
+  box-shadow: 0 0 0 14px #f7f5ec;
+  transform: scale(0.7);
+}
+
+.our-team .title {
+  display: block;
+  font-size: 15px;
+  color: #4e5052;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.our-team .resources {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #1369ce;
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  transition: all 0.5s ease 0s;
+}
+
+.our-team:hover .resources {
+  bottom: 0;
+}
+
+/* code for button animation and styling  */
+
+.download_btn {
+  display: block;
+  /* background: #fec608; */
+  text-align: center;
+  line-height: 40px;
+  /* border-radius: 20px; */
+  color: #fff;
+  font-size: 18px;
+  font-family: "Yellowtail", cursive;
+  position: relative;
+  overflow: hidden;
+}
+.download_btn span {
+  display: inline-block;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  height: 100%;
+  transition: all 400ms linear 0s;
+}
+.download_btn:before {
+  content: "\f019";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 18px;
+  color: #fff;
+  top: -100%;
+  left: 0px;
+  font-family: FontAwesome;
+  transition: all 200ms ease-in;
+}
+.download_btn:hover:before {
+  top: 0px;
+}
+img:hover {
+  transform: scale(1.5);
+  transition: all 1s ease-in-out;
+}

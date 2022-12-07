@@ -1,0 +1,446 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Hind", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #cff5e7;
+  user-select: none;
+}
+
+a {
+  text-decoration: none;
+}
+h2 {
+  font-size: 23px;
+  font-weight: 450;
+}
+h5 {
+  font-size: 18px;
+  font-weight: 400;
+}
+i {
+  font-size: 20px;
+  font-weight: bold;
+}
+/* ----------------------------utility Classes---------------------------- */
+/* .container {
+  width: 90%;
+} */
+.header__container {
+  width: 100%;
+  min-height: 30vh;
+}
+.navigation__container {
+  height: 45px;
+  background-color: #0d4c92;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 0px 1rem 0px;
+}
+.hamburger {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid rgb(99, 211, 211);
+  border-radius: 7px;
+  padding: 5px;
+  display: none;
+  color: #0d4c92;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.navigation__container .navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.navbar a {
+  color: white;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 21px;
+}
+.intro__container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.intro__container .intro__title {
+  margin-bottom: 7px;
+}
+.intro__title h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.intro_content p {
+  margin: 0 11rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+.brief_info__container {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  width: 90%;
+  margin: 1rem auto;
+}
+.brief_info__container .brief_info__content {
+  width: 77%;
+}
+.brief_info__container h2 {
+  font-size: 23px;
+  font-weight: 450;
+}
+.brief_info__container p {
+  font-size: 20px;
+  font-weight: 350;
+  padding: 0px 12px;
+}
+.brief_info__container .contact {
+  display: flex;
+  flex-direction: column;
+}
+.contact span {
+  padding: 0px 12px;
+}
+.useful_links {
+  width: 20%;
+}
+.about_me__container {
+  width: 85%;
+  margin: 1rem auto;
+}
+.education__container {
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+}
+.education__container .edu {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+}
+.work_exp__container .exp {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+}
+.research_interests__container {
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+}
+.research_interests__container .research_interests {
+  margin: 1rem auto;
+}
+.research_interests #orcid {
+  padding: 12px;
+  margin-bottom: 12px;
+}
+#orcid a img {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 12px;
+}
+.research_interests .research_interests_img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  border: 1px solid #a2f7d7;
+  box-shadow: -2px 2px 1px 2px #c1f3e0;
+  cursor: pointer;
+}
+.research_interests_img:first-child {
+  border-bottom: 0;
+}
+.research_interests_img img {
+  width: 100%;
+}
+.key_publications_of_the_year__container {
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+}
+.key_publications_of_the_year__container .journal_publications,
+.key_publications_of_the_year__container .patent_publications {
+  margin: 0.7rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.journal_publications h5,
+.patent_publications h5 {
+  font-size: 18px;
+  font-weight: 400;
+}
+.publications {
+  padding: 12px;
+}
+.publications li {
+  margin: 7px;
+}
+.publications li p {
+  padding: 5px;
+}
+.key_publications_of_the_year__container #link {
+  text-align: right;
+}
+.projects__container {
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+}
+.projects_content ul {
+  padding: 12px;
+}
+.projects_content ul li {
+  margin: 7px;
+}
+.projects_content ul li p {
+  padding: 5px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.projects_content ul li span {
+  font-size: 13px;
+  font-weight: bold;
+}
+.projects_content .project_outcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.banner {
+  background: linear-gradient(to left, #cff5e7, #a1f7d7c9);
+  width: 100%;
+  margin-bottom: 10px;
+}
+.banner h3 {
+  color: black;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 430;
+}
+.project_outcome .project_img a img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 400px;
+}
+
+.footer__container {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 30px;
+  background-color: #07305f;
+  align-items: center;
+  justify-content: center;
+}
+.footer__container span {
+  color: white;
+}
+.footer__container span a {
+  color: blanchedalmond;
+  font-weight: 400;
+}
+/* Styling of Side Navigation  */
+.side__navigation {
+  display: flex;
+}
+.side__navigation a {
+  position: absolute;
+  right: -65px;
+  transition: 0.3s;
+  padding: 10px;
+  width: 105px;
+  color: white;
+  border-radius: 7px 0 0 7px;
+}
+.side__navigation a:hover {
+  right: 0;
+}
+#contact {
+  top: 300px;
+  background-color: #07305f;
+}
+#contact span,
+#cv span {
+  padding-left: 11px;
+  font-size: 15px;
+}
+#cv {
+  top: 360px;
+  background-color: #07305f;
+}
+#contact,
+#cv {
+  display: flex;
+  align-items: center;
+  position: fixed;
+}
+#top {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  right: 10px;
+  bottom: 50px;
+  z-index: 99;
+  background-color: #07305f;
+  padding: 5px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#top:hover {
+  background-color: #2e5a8d;
+}
+#top i {
+  color: white;
+}
+
+/* ----------------Media Queries for Responsive Design for Mobile Phones & Tablets----------------------------- */
+@media screen and (max-width: 1250px) {
+  .intro__title h1 {
+    font-size: 1.5rem;
+    /* font-weight: 580; */
+  }
+}
+@media screen and (max-width: 1144px) {
+  /* .brief_info__container {
+    width: 100%;
+    margin: 1rem auto;
+    flex-direction: column;
+    gap: 1.5rem;
+  } */
+  /* .brief_info__container .brief_info__content {
+    width: 100%;
+  } */
+  /* .useful_links {
+    width: 100%;
+    margin-left: 40px;
+  } */
+  /* .useful_links .links_list ul {
+    margin-left: 50px;
+  } */
+  .intro_content p {
+    margin: 0 5rem;
+  }
+}
+
+@media screen and (min-width: 998px) {
+  /* .container {
+    width: 900px;
+  } */
+}
+@media screen and (max-width: 800px) {
+  .navigation__container .navbar {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .hamburger {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  .navbar.show {
+    display: flex;
+    align-items: center;
+  }
+  .project_outcome .project_img a img {
+    height: 300px;
+  }
+  .intro_content p {
+    margin: 0 4rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  /* .footer__container {
+    height: 35px;
+  }
+  .footer__container span {
+    font-size: 15px;
+  } */
+  .project_outcome .project_img a img {
+    height: 200px;
+  }
+  .intro_content p {
+    margin: 0 3rem;
+  }
+}
+@media screen and (max-width: 425px) /* For Mobile Devices */ {
+  .project_outcome .project_img a img {
+    height: 150px;
+  }
+  .intro_content p {
+    margin: 0 1rem;
+  }
+  .side__navigation {
+    display: none;
+  }
+  #top {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  /* ------------------------------Mobile css------------------------------------  */
+  .desktop {
+    display: none;
+  }
+  h2 {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .brief_info__container {
+    width: 85%;
+    margin: 0.5rem 1rem;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .brief_info__container .brief_info__content {
+    width: 100%;
+  }
+  .brief_info__container .useful_links {
+    width: 100%;
+    margin-left: 30px;
+  }
+  .useful_links .links_list ul {
+    margin-left: 32px;
+  }
+  .about_me__container {
+  }
+  .footer__container span {
+    font-size: 11px;
+  }
+}
+@media (min-width: 700px) {
+  /* -------------------------------Desktop css----------------------------------  */
+  .mobile {
+    display: none;
+  }
+}
