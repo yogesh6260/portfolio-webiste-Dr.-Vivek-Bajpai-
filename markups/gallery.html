@@ -26,10 +26,25 @@
     <link rel="stylesheet" href="../styles/lightbox.min.css" />
   </head>
   <body>
-    <div class="back_to_home" onclick='window.location.href="./index.html"'>
+    <!-- Header  -->
+    <header class="header__container">
+      <div class="navigation__container">
+        <button class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav class="navbar" id="navBar">
+          <a href="../index.html">Home</a>
+          <a href="./lab.html">Research Lab</a>
+          <a href="../Assets/PDFs/list of publications.pdf">Publications</a>
+          <a href="../Assets/PDFs/patent1.pdf">Patents</a>
+          <a href="./gallery.html">Gallery</a>
+        </nav>
+      </div>
+    </header>
+    <!-- Client not require this button <div class="back_to_home" onclick='window.location.href="./index.html"'>
       <i class="fa-solid fa-circle-left"></i>
       <a href="../index.html" title="Back to Home">Back to Home</a>
-    </div>
+    </div> -->
 
     <!-- Top Button  -->
     <a href="#" id="top" title="Go to top">

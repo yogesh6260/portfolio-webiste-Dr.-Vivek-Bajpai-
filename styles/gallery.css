@@ -1,3 +1,7 @@
+.header__container {
+  min-height: 10vh;
+}
+
 .section {
   margin-left: 10%;
   margin-right: 10%;
